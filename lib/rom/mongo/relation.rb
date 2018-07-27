@@ -20,7 +20,7 @@ module ROM
 
       # @api public
       def only(*fields)
-        schema.project(*fields).(self)
+        schema.project(*fields).call(self)
       end
 
       # @api public
@@ -30,7 +30,7 @@ module ROM
 
       # @api public
       def without(*fields)
-        schema.project(*(schema.map(&:name) - fields)).(self)
+        schema.project(*(schema.map(&:name) - fields)).call(self)
       end
 
       # @!method by_pk(id)

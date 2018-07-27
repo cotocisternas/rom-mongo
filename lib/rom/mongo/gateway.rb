@@ -34,7 +34,11 @@ module ROM
       #   Connects to a database via URI and options
       #
       #   @example
-      #     ROM.container(:mongo, 'mongodb://127.0.0.1:27017/db_name', inferrable_relations: %i[users posts])
+      #     ROM.container(
+      #       :mongo,
+      #       'mongodb://127.0.0.1:27017/db_name',
+      #       inferrable_relations: %i[users posts]
+      #     )
       #
       #   @param [String,Symbol] uri connection URI
       #

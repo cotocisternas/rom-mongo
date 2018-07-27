@@ -82,7 +82,7 @@ RSpec.describe 'Mongo gateway' do
     describe 'delete' do
       it 'deletes documents from the collection' do
         jane = users.by_name('Jane').one!
-        joe = users.by_name('Joe').one!
+        users.by_name('Joe').one!
 
         result = commands.delete.call(name: 'Joe')
 
