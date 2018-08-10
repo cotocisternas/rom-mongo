@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'dry-types', '~> 0.13'
+gem 'dry-types', '~> 0.13.2'
 
 gem 'rom', '~> 4.2' do
-  gem 'rom-core', '~> 4.2'
-  gem 'rom-mapper', '~> 1.2'
-  gem 'rom-repository', '~> 2.0', group: :tools
+  gem 'rom-core', '~> 4.2', '>= 4.2.0'
+  gem 'rom-mapper', '~> 1.2', '>= 1.2.1'
+  gem 'rom-repository', '~> 2.0', '>= 2.0.2', group: :tools
 end
 
 group :test do
@@ -19,6 +19,7 @@ end
 
 group :tools do
   gem 'rubocop'
+  gem 'rubocop-rspec'
 
   gem 'guard'
   gem 'guard-rspec'
